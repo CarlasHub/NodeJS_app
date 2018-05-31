@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<div class='container'>
+    <div class='row'>
+        <div style='width: 30%;margin: 0 auto;'>
+          <div class="field">
+               <h1> Add new beach</h1> 
+             </div>  
+        <form action='/beaches' method='POST'>
+            <input class='form-control' type='text' name='name' placeholder='name'>
+            <input class='form-control' type='text' name='image' placeholder='image url'>
+            <input class='form-control' type='text' name='description' placeholder='Decribe this place '>
+            <button class='btn btn-lg btn-primary btn-default'>Submit</button>
+        </form>
+            <a href="/beaches">Go back</a>
+        </div>
+    <% include ../partials/footer %>
+    </div>
+</div>
