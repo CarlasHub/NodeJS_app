@@ -1,23 +1,28 @@
 var mongoose     = require('mongoose');
 var Beach        = require("./models/beach");
 var Comment      = require("./models/comment");
+var User1        = require("./models/user");
 var data         =[
    {
         name: "Tavira", 
         image:"https://www.atlantisbahamas.com/media/Things%20To%20Do/Water%20Park/Beaches/Hero/Experiences_Beach.jpg",
-        description :"how lovely and fun - this is the place to be"
+        description :"how lovely and fun - this is the place to be",
+        id : "588c2e092403d111454fff76",
+        username: "Carla Goncalves"
             
         },
     
     {
         name: "Albufeira", 
         image:"https://www.atlantisbahamas.com/media/Things%20To%20Do/Water%20Park/Beaches/Hero/Experiences_Beach.jpg",
-        description :"how lovely and fun - this is the place to be"
+        description :"how lovely and fun - this is the place to be",
+        id : "588c2e092403d111454fff76",
+        username: "Carla Goncalves "
             
         }
     
-    
     ]
+   
 
 
 function seedDB(){
@@ -41,7 +46,7 @@ function seedDB(){
                    Comment.create(
                         {
                             text: "This place is great, but I wish there was internet",
-                            author: "Homer"
+                            author: "Carla"
                         }, function(err, comment){
                             if(err){
                                 console.log(err);

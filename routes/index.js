@@ -25,10 +25,12 @@ router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
+            req.flash("error", err.message);
             console.log(err);
             return res.render("register");
         }
         passport.authenticate("local")(req, res, function(){
+           req.flash("success", "Welcome to Beach Me Up " + user.username);
            res.redirect("/beaches"); 
         });
     });
@@ -48,25 +50,6 @@ router.post("/login", passport.authenticate("local",
     }), function(req, res){
 });
 
-// logic route
-router.get("/logout", function(req, res){
-    //this logout method comes from the packages installed 
-   req.logout();
-   res.redirect("/beaches");
-});
 
-
-//the user only can add comments and content if login
-//call this function on the comment route
-
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-       
-    }
-    req.session.returnTo = req.originalUrl; 
-
-    res.redirect("/login");
-}
 
 module.exports = router;
