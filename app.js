@@ -13,6 +13,8 @@ var Comment       = require("./models/comment");
 var seedDB        = require("./seeds");
 
 
+
+
 //requring routes
 var  indexRoutes      = require("./routes/index");
 var  beachesRoutes    = require("./routes/beaches");
@@ -20,8 +22,11 @@ var  commentRoutes    = require("./routes/comments");
 
 
 
+
 //connect to the database
 mongoose.connect("mongodb://localhost/beach_app");
+
+
 
 //parse application
 app.use(bodyParser.urlencoded({ extended: true}));

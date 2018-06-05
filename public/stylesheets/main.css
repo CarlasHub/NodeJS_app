@@ -1,28 +1,405 @@
 
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Indie+Flower');
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/*=========general==========*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.btn{
+  width: 150px;
+}
+h3{
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  
+}
+.nav .navbar-header {
+  background-color: #2887C8!important;
+}
 
+.nav li a{
+  color: white !important;
+  font-size: 15px;
+}
 
-.thumbnail image {
+.nav a{
+  color: white !important;
+  font-weight: 700;
+  font-size: 25px;
+}
+.container-fluid{
+  background-color: #2887C8!important;
+  font-family: 'Indie Flower', cursive;
+ 
+}
+ .nav-brand a{
+  background-color: #2887C8!important;
+}
+
+@media screen and (min-width: 1000px) {
+  nav .navbar-header{
+  background-color: #2887C8 !important; 
+  }
+  
+  .container-fluid{
+    background-color: #2887C8 !important; 
+  }
+}
+
+/*===============Index Page===============*/
+
+#index-page{
+  width: 100%;
+  height: 100%;
+  background-image: url("https://bit.ly/2HmzWsw");
+  background-size: cover;
+  background-position:center;
+}
+
+.overlay-light{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:black;
+  opacity: 0.4; 
+}
+
+header.jumbotron{
+  background-color: #2887C8 !important;
+  text-align: center;
+  color: white;
+  border: solid white 1px;
+  opacity: 1;
+  z-index: 300;
+
+   
+}
+.jumbotron .container{
+  background-color: #2887C8;
+  opacity: 1;
+ 
+}
+
+.container h1{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+}
+.container span{
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;
+}
+
+.container .btn{
+  min-width: 200px;
+}
+
+form  .search{
+  color: #2887C8 !important;
+  font-weight: 900;
+  background: white !important;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background:transparent /* #58868F*/;
+  color: #408296 ;
+  text-align: center;
+  font-weight: 900;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+/* Thumbnail styles */
+ h2{
+  color:white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.thumbnail img {
     width: 100%;
+    min-height: 200px;
 }
 
 .thumbnail {
-    padding: 0;
+  min-width:100%;
+  height: 100%;
+  padding: 0;
+    
 }
 
 .thumbnail .caption-full {
     padding: 9px;
+    
+}
+.caption{
+  color: white !important;
+  font-weight: 700;
 }
 
-#delete-form {
-    display: inline;
+@media screen and (min-width: 1000px ) {
+    #thumbnail {
+    height: 100% !important;
+  }
+  
 }
 
- .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:transparent;
-    color: white;
-    text-align: center;
+/* Google Map styles */
+#map {
+	height: 400px;
+	width: 100%;
 }
+
+/*=================show page============== */
+.contents{
+  margin-top: 40px;
+}
+.lead{
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;
+  color: #00AFF2;
+}
+.well .btn{
+  background-color:#00AFF2;
+  border:solid 1px white;
+  color: white;
+}
+
+.delete-form {
+	display: inline-block;
+	
+}
+.col-md-12 strong{
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;
+  font-size: 20px;
+  color:#22B9F3;
+}
+  
+/*====STARS====*/
+.wrap-stars{
+ 
+  text-align: center;
+  float:right;
+}
+.starrating > input {
+  text-align:center;
+  display: none;
+ 
+  
+}  /* Remove radio buttons */
+
+.starrating > label:before { 
+  content: "\f005"; /* Star */
+  margin: 2px;
+  font-size: 1em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.starrating > label{
+  color: #ffca08 ;
+   /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color:green;} /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #8FD1CD;  } /* Set yellow color when star hover */
+
+
+#delete-form .btn-danger{
+  background-color: red;
+  
+}
+section .btn-edit{
+  Background-color: green;
+  color: white;
+}
+section .btn-delete{
+  margin-top: 10px;
+  Background-color: red;
+  color: white;
+  min-width:200px;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  
+}
+.edit .form-group{
+  display: inline-block;
+  
+}
+
+/* Flexbox grid fix */
+.flex-wrap {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+/* =============login===========================*/
+.h1-login, .h1-register{
+  color: white;
+  text-align: center;
+}
+.login-back{
+  background-image:url("https://bit.ly/2sz5WVG");
+  background-size: cover;
+  background-position:center;
+}
+
+
+.login, .register, .add{
+  background-color:#2887C8;
+  width:50vh;
+  height: 60vh;
+  margin: auto;
+  color: white;
+  text-align: center;
+  border-radius:10px;
+}
+
+.login input, .register input,.add input{
+  position: relative;
+  top: 20%;
+  margin-top: 20px;
+  display: block;
+  margin: auto;
+  text-align:center;
+  padding:8px 15px;
+  border-radius: 5px;
+  color: grey;
+  
+}
+.login .btn{
+  width:150px;
+  background-color:#00AFF2;
+  border:solid 1px white;
+  color: white;
+  padding: 3px 10px;
+  
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 50px;
+  
+}
+.buttons a{
+  width:150px;
+  background-color: #3D7866;
+}
+.login-btn {
+  position: relative;
+  color: white;
+  display: inline-block;
+  width:150px;
+  background-color:yellow;
+  border:none;
+  outline: none;
+  color: white;
+
+}
+.register > button{
+  position: relative;;
+  bottom: -70px;
+  color: white;
+  display: inline-block;
+  width:150px;
+  background-color:#00AFF2;
+  border:solid 1px white;
+  padding: 6px 10px;
+}
+
+.register-back{
+  background-image:url("https://bit.ly/2Jl4NYu");
+  background-size: cover;
+  background-position:center;
+  
+}
+ /*============edit==========*/
+ .edit-back{
+   background-image:url("https://bit.ly/2sGQjLe");
+  background-size: cover;
+  background-position:center;
+ }
+ .h1-edit{
+   text-align: center;
+   color:#FFB102 ;
+ }
+.text-area input{
+  min-height: 30vh;
+  min-width: 50vh;
+  text-align: center;
+}
+
+
+
+form .btn{
+ text-align: center !important; 
+ margin:auto;
+ color:white;
+
+}
+form .edit{
+  text-align:center;
+}
+
+/*====== ADD BEACH TEMPLATE=====*/
+#add-back{
+  background-image:url("https://bit.ly/2Jdqs8W");
+  background-size: cover;
+  background-position:center;
+ }
+ 
+
+ .row-register >*{
+   text-align:center;
+ }
+  .h1-register{
+   font-family: sans-serif !important;
+ }
+.add > input{
+  width:70%;
+}
+.add > button{
+  position: relative;
+  bottom: -70px;
+}
+
+.back{
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+
+}
+
+/*====add comment====*/
+.add-comment > .form-control, .text{
+  height: 300px;
+  
+  
+}
+
+
+
+
+
+
+
+

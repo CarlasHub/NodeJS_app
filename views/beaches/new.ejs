@@ -1,18 +1,25 @@
 <% include ../partials/header %>
+<body id="add-back">
+<div class="overlay-light"></div> 
 <div class='container'>
-    <div class='row'>
+    <div class='row row-register'>
         <div style='width: 30%;margin: 0 auto;'>
           <div class="field">
-               <h1> Add new beach</h1> 
+               <h1 class="h1-register"> Add new beach</h1> 
              </div>  
-        <form action='/beaches' method='POST'>
+        <form class="add" action='/beaches' method='POST'>
             <input class='form-control' type='text' name='name' placeholder='name'>
+            <br>
             <input class='form-control' type='text' name='image' placeholder='image url'>
+            <br>
             <input class='form-control' type='text' name='description' placeholder='Decribe this place '>
+            <br><br><br>
             <button class='btn btn-lg btn-primary btn-default'>Submit</button>
+            
         </form>
-            <a href="/beaches">Go back</a>
+           <a class="back" href="/beaches">Go back</a>
         </div>
-    <% include ../partials/footer %>
     </div>
 </div>
+</body>
+<% include ../partials/footer %>

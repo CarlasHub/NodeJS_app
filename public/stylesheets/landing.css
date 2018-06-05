@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
 body {
-  background-color: #000;
+  background-color: #3C8FAB;
 }
+
+
 
 #landing-header {
   z-index: 1;
@@ -10,7 +14,14 @@ body {
 }
 
 #landing-header h1 {
-  color: #fff;
+  font-family: 'Bowlby One SC', cursive;
+  color: white;
+}
+
+#landing-header a{
+  background-color: #0081AB !important;
+  border: solid #0171CB 1px;
+  min-width: 100px
 }
 
 .footer {
@@ -19,7 +30,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: transparent;
-    color: darkblue;
+    color: lightgrey;
     text-align: center;
 }
 
@@ -47,6 +58,20 @@ body {
   opacity: 0;
   z-index: 0;
   animation: imageAnimation 50s linear infinite; 
+}
+
+@media screen and (min-width: 1000px) {
+    #landing-header h1 {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 50px;
+    color: white;
+  }
+  #landing-header a{
+    min-width: 200px;
+    padding:15px;
+    font-weight: 700;
+    font-size: 30px;
+  }
 }
 
 .slideshow li:nth-child(1) { 

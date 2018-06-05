@@ -1,16 +1,23 @@
 <% include ./partials/header %>
 
-
-<h1> Login! </h1>
+<body class="login-back">
+<div class="overlay-light"></div>
+<h1 class="h1-login"> Login! </h1>
 
 <!-- add the route for login-->
-<form action="/login" method="post">
+<form  class="login"action="/login" method="post">
     <input type="text" name="username" placeholder="username">
+    <br><br>
     <input type="password" name="password" placeholder="password">
-    <input type="submit" value="login">
+    <br><br>
+    <input class="btn btn-success" type="submit" value="login">
+    
 </form>
+<div class="buttons">
+<a class="btn btn-success login-btn centered" href="/register">Sign Up!</a>
+<a class="btn btn-success login-btn centered" href="/logout">Logout!</a>
 
-<li><a href="/register">Sign Up!</a></li>
-<li><a href="/logout">Logout!</a></li>
+</div>
 
 <% include ./partials/footer %>
+</body>
