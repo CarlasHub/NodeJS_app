@@ -24,7 +24,9 @@ var  commentRoutes    = require("./routes/comments");
 
 
 //connect to the database
-mongoose.connect("mongodb://localhost/beach_app");
+//mongoose.connect("mongodb://localhost/beach_app");
+mongoose.connect("mongodb://carla:Carla12345@ds247410.mlab.com:47410/beach_app");
+//mongodb://carla:Carla12345@ds247410.mlab.com:47410/beach_app
 
 
 
